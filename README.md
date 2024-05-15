@@ -7,26 +7,37 @@ Bleeding Edge fill bot
 A custom program to remotely execute Bleeding edge, join a custom lobby and leave
 
 ## Setup
-1. Paste your discord token in .env file
-2. Paste the launcher path 
+### Create New Discord Bot
+1. Go to https://discord.com/developers/applications
+2. Select New Application
+3. Name it \<your user\> fill bot
+4. Chcek the check-box to accept Discord's TOS
+5. Select 'Create'
 
-## Token Aquisition
-1. go to https://discord.com/developers/applications
-2. click New Application
-3. name it <your user> fill bot
-4. accept terms
-5. click 'create'
-6. at the left side click bot 
-7. click 'reset token'
-8. click 'yes do it'
-9. click copy and paste that as your disocrd_token in the .env file
-10. toggle on the three privilaged gateway intents
-11. click 'OAuth2' 
-12. go to URL Generator
-13. select bot, applications.commands
-14. give permsion to Send Messages, Read Message History
-15. click 'copy'
-16. save that somewhere for later
+### Configure Bot Settings
+1. Select 'Bot' in settings  
+2. Make sure the three privilaged gateway intents are on
+3. Check the 'Administator' permission under 'Bot Permissions'
+4. In the .env file, paste the token at \<disocrd_token\>
+5. Navigate back to the discord developer portal
+6. Select 'OAuth2' 
+7. Under 'OAuth2 URL Generator' check 'bot' & 'applications.commands'
+8. Under 'Bot Permisions' check 'Send Messages' & 'Read Message History'
+
+### Paste Bot Token Into .env File
+In the discord developer portal...
+1. Select 'Bot' in settings
+2. Select 'Reset Token'
+3. Select 'Yes, do it!'
+4. Select 'Copy'
+
+### Add Bot to server.
+> [!IMPORTANT]
+> In order to add the bot to a server an admin of the server must accept the bot
+1. Select 'OAuth2'
+2. Under 'Generated URL' select 'copy'
+3. save that somewhere for later
+
 
 ## Finding launcher path
 1. open file explore
@@ -46,7 +57,6 @@ to get process name...
 8. paste this into your .env file as PROCESS_NAME
 
 now that the .env file is set up paste the link into the discord server
-
 
 
 ## auto run
