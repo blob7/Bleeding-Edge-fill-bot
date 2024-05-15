@@ -31,32 +31,32 @@ In the discord developer portal...
 3. Select 'Yes, do it!'
 4. Select 'Copy'
 
-### Add Bot to server.
+### Add Bot To Server.
 > [!IMPORTANT]
-> In order to add the bot to a server an admin of the server must accept the bot
+> To add the bot to a server, an admin of the server must authorize the bot
 1. Select 'OAuth2'
 2. Under 'Generated URL' select 'copy'
-3. save that somewhere for later
+3. Paste the link into a channel of the server
+4. To authorize, click the link and select 'Authorize'
 
+### Paste The Game's launcher Path Into .env File
+1. Open file explore
+2. Naviage to Bleeding Edge directory
+3. Locate 'launch_game.exe' in Bleeding Eduge > Content > launch_game.exe
+4. right click on 'launch_game.exe' and select 'Copy as path'
+5. In the .env file, paste the path at \<launcher_path\>
 
-## Finding launcher path
-1. open file explore
-2. naviage to Bleeding Edge
-3. find launch_game.exe under content folder
-4. right click on it and select copy as file path
-5. paste that in the .env file in LAUNCHER_PATH
+### Paste The Process Name Into .env FIle
+1. Open Bleeding Edge
+2. Naviage to the menu of the game
+3. Press ctrl + shift + esc to bring up task manager
+4. 
+5. click the > near bleeding edge to expand it
+6. right click on the bleeding edge that is now visable
+7. click properties
+8. Copy the name at the top of general
+9. In the .env file, paste this into your .env file as PROCESS_NAME
 
-to get process name...
-1. open bleeding edge
-2. naviage to the menu
-3. press ctrl + shift + esc to bring up task manager
-4. click the > near bleeding edge to expand it
-5. right click on the bleeding edge that is now visable
-6. click properties
-7. Copy the name at the top of general
-8. paste this into your .env file as PROCESS_NAME
-
-now that the .env file is set up paste the link into the discord server
 
 
 ## auto run
