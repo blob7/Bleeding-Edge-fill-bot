@@ -77,36 +77,40 @@ In the discord developer portal...
 ### Paste Your Bot Channel ID
 > [!NOTE]
 > skip to step 4 if your account already has developer mode enabled
-1. open Discord
-2. go to Settings > Advanced
-3. enable developer mode
-4. right-click on the channel you want the bot to monitor
-5. select 'Copy ID'
+1. Open Discord
+2. Go to Settings > Advanced
+3. Enable developer mode
+4. Right-click on the channel you want the bot to monitor
+5. Select 'Copy ID'
 6. In the .env file, paste the process name at \<channel id\>
 > [!IMPORTANT]
 > Remove the "\<" "\>" when your enter your information
 
 ## Setup Task Scheduler 
 If you want the program to run automatically follow these steps
+The purpose of the bat file is to ensure the task scheduler runs the file correctly
 
-### Paste The Path Into The Bot Runner File
+### Paste Python's Path Into The Bot Runner File
 1. Open command prompt
 2. Enter the command "where python"
-3. copy the result into \<path\> and remove "\python.exe"
+3. Copy the result
+> [!NOTE]
+> If you see multiple results, select the first one
+4. In the Bot Runner file, paste the path at \<path\> and remove "\python.exe"
 > [!IMPORTANT]
 > Remove the "\<" "\>" when your enter your information
 
-### Paste The Python  
-5. in file explore find the fill bot folder
-6. right click and select copy as path
-7. paste that in both <your python path>
-keep \bot.py to the end of line 4
-to verify it works copy botRunner.bat as filepath and run it in terminal(win button search cmd and paste)
+### Paste The Bot Directory Into The Bot Runner File
+1. Open file explorer
+2. Navigate to your fill bot folder
+3. Right click and select copy as path
+4. Paste the directory path in both \<dir path\>
 > [!IMPORTANT]
 > Remove the "\<" "\>" when your enter your information
 
+### Create Task In Task Scheduler
 1. Open Task Scheduler.
-2. Click "Create Task" at right side
+2. Select 'Create Task'
 3. Name it 5MinWakeup
 4. click configure for and select windows 10
 
@@ -138,6 +142,11 @@ to verify it works copy botRunner.bat as filepath and run it in terminal(win but
 to verify
 1. open task scheduler library look for 5MinWakeup
 
+
+
+## Additional configuration
+
+## Ways to reduce powerdraw device
 ideas on how to lower powerdraw
 lower resolution
 lower brightness
@@ -149,8 +158,4 @@ turn off bluetooth
 Disable Unused Ports:
 power saver in power plan
 disable non esential apps in background
-
-## Additional configuration
-
-## Ways to reduce powerdraw device
 
