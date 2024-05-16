@@ -4,14 +4,13 @@
 Bleeding Edge fill bot
 
 ## Description
-- A python script to remotely execute Bleeding Edge, join a custom games lobby, and exit.
-- A bat script to ensure the python file runs correctly when ran by task scheduler
+A script to remotely execute Bleeding Edge, join a custom games lobby, and exit from a discord command.
 
 ## How to use
 use the join command to specify what lobby code the bot should join
 run the bot script (either automatically or manually) to execute the actions
 
-### Commands
+### Discord Commands
 - !join [code]: Launches Bleeding Edge and Queues for the specified code
 
 ## Setup Bot
@@ -120,55 +119,25 @@ The purpose of the bat file is to ensure the task scheduler runs the file correc
 4.  Select 10MinFillBot.xml
 5.  Select 'OK'
 
-
-### Create Task In Task Scheduler
-1. Open Task Scheduler.
-2. Select 'Create Task'
-3. Name it 5MinWakeup
-4. click configure for and select windows 10
-
-*if you have to log in from sleep mode and are putting device to sleep*
-5. select run wheter user is logged on or not
-6. select do not store paswords
-
-7. click triggers at the top
-8. click new
-9. select daily at top left
-10. set start time to be 6:00:00 PM  (us eastern convert to your time)
-11. select Repeat task every: and set it to 1 minute
-12. click for a duration of and set it to  9 hours
-13. click ok
-14. click actions at the top
-15. click new
-16. open file explore and find the botRunner.bat file
-16. select copy as path
-17. paste it under programs/script
-18. click ok
-19. go to settings at top
-20. at the bottom of setings click on if the task is already running option
-21. select Queue a new instance
-
-*if you want your computer to be in sleep mode when not running this*
-22. go to conditions select wake the computer to run this task 
-23. click ok
-
-to verify
-1. open task scheduler library look for 5MinWakeup
-
-
-
 ## Additional configuration
+### Automatic sleep mode when not checking 
+1. Open Task Scheduler
+2. Select 10MinFillBot
+3. Select 'Properties'
+4. Select 'Conditions'
+5. Select 'Wake the computer to run this task'
+6. Select 'OK'
+7. Open the .env file
+8. Set DO_SLEEP to equal to True
 
 ## Ways to reduce powerdraw device
-ideas on how to lower powerdraw
-lower resolution
-lower brightness
-lower BE settings
-close unecessary applications
-use plain black background
-disable volume
-turn off bluetooth
-Disable Unused Ports:
-power saver in power plan
-disable non esential apps in background
-
+- Lower resolution
+- Lower brightness
+- Lower BE settings
+- Close unecessary applications
+- Use plain black background
+- Disable volume
+- Turn off bluetooth
+- Disable Unused Ports:
+- Power saver in power plan
+- Disable non esential apps in background
