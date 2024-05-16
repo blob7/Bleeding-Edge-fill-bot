@@ -4,9 +4,9 @@
 Bleeding Edge fill bot
 
 ## Description
-A custom program to remotely execute Bleeding edge, join a custom lobby and leave
+A script to remotely execute Bleeding Edge, join a custom games lobby, and exit.
 
-## Setup
+## Setup Bot
 ### Create New Discord Bot
 1. Go to https://discord.com/developers/applications
 2. Select New Application
@@ -18,20 +18,22 @@ A custom program to remotely execute Bleeding edge, join a custom lobby and leav
 1. Select 'Bot' in settings  
 2. Make sure the three privilaged gateway intents are on
 3. Check the 'Administator' permission under 'Bot Permissions'
-4. In the .env file, paste the token at \<disocrd_token\>
+4. In the .env file, paste the token at \<disocrd token\>
 5. Navigate back to the discord developer portal
 6. Select 'OAuth2' 
 7. Under 'OAuth2 URL Generator' check 'bot' & 'applications.commands'
 8. Under 'Bot Permisions' check 'Send Messages' & 'Read Message History'
 
-### Paste Bot Token Into .env File
+### Paste The Discord Token Into .env File
 In the discord developer portal...
 1. Select 'Bot' in settings
 2. Select 'Reset Token'
 3. Select 'Yes, do it!'
 4. Select 'Copy'
+> [!IMPORTANT]
+> Remove the "\<" "\>" when your enter your information
 
-### Add Bot To Server.
+### Add The Bot To Server.
 > [!IMPORTANT]
 > To add the bot to a server, an admin of the server must authorize the bot
 1. Select 'OAuth2'
@@ -44,23 +46,36 @@ In the discord developer portal...
 2. Naviage to Bleeding Edge directory
 3. Locate 'launch_game.exe' in Bleeding Eduge > Content > launch_game.exe
 4. right click on 'launch_game.exe' and select 'Copy as path'
-5. In the .env file, paste the path at \<launcher_path\>
+5. In the .env file, paste the path at \<launcher path\>
+> [!IMPORTANT]
+> Remove the "\<" "\>" when your enter your information
 
 ### Paste The Process Name Into .env FIle
 1. Open Bleeding Edge
 2. Naviage to the menu of the game
 3. Press ctrl + shift + esc to bring up task manager
-4. 
-5. click the > near bleeding edge to expand it
-6. right click on the bleeding edge that is now visable
-7. click properties
-8. Copy the name at the top of general
-9. In the .env file, paste this into your .env file as PROCESS_NAME
+5. Locate Bleeding Edge in the process list.
+6. Select the > to the left of Bleeding Edge to expand
+7. Right click the process under Bleeding Edge
+8. Select 'properties'
+9. Copy the name of the process
+10. In the .env file, paste the process name at \<process name\>
+> [!IMPORTANT]
+> Remove the "\<" "\>" when your enter your information
 
+### Paste Your Bot Channel ID
+> [!NOTE]
+> skip to step 4 if your account already has developer mode enabled
+1. open Discord
+2. go to Settings > Advanced
+3. enable developer mode
+4. right-click on the channel
+5. select 'Copy ID'
+6. In the .env file, paste the process name at \<channel id\>
+> [!IMPORTANT]
+> Remove the "\<" "\>" when your enter your information
 
-
-## auto run
-first set up bat file
+## Setup Task Scheduler 
 1. press win key and type: where python
 2. copy result into <your path> and remove the last \python.exe
 3. in file explore find the fill bot folder
