@@ -4,7 +4,15 @@
 Bleeding Edge fill bot
 
 ## Description
-A script to remotely execute Bleeding Edge, join a custom games lobby, and exit.
+- A python script to remotely execute Bleeding Edge, join a custom games lobby, and exit.
+- A bat script to ensure the python file runs correctly when ran by task scheduler
+
+## How to use
+use the join command to specify what lobby code the bot should join
+run the bot script (either automatically or manually) to execute the actions
+
+### Commands
+- !join [code]: Launches Bleeding Edge and Queues for the specified code
 
 ## Setup Bot
 ### Create New Discord Bot
@@ -30,6 +38,7 @@ In the discord developer portal...
 2. Select 'Reset Token'
 3. Select 'Yes, do it!'
 4. Select 'Copy'
+5. In the .env file, paste the token at \<discord token\>
 > [!IMPORTANT]
 > Remove the "\<" "\>" when your enter your information
 
@@ -54,12 +63,14 @@ In the discord developer portal...
 1. Open Bleeding Edge
 2. Naviage to the menu of the game
 3. Press ctrl + shift + esc to bring up task manager
-5. Locate Bleeding Edge in the process list.
-6. Select the > to the left of Bleeding Edge to expand
-7. Right click the process under Bleeding Edge
-8. Select 'properties'
-9. Copy the name of the process
-10. In the .env file, paste the process name at \<process name\>
+4. Locate Bleeding Edge in the process list.
+> ![NOTE]
+> The process can sometimes be listed as MobladeClient...exe. If that is the case copy that name into the .env file
+5. Select the > to the left of Bleeding Edge to expand
+6. Right click the process under Bleeding Edge
+7. Select 'properties' 
+8. Copy the name of the process
+9. In the .env file, paste the process name at \<process name\>
 > [!IMPORTANT]
 > Remove the "\<" "\>" when your enter your information
 
@@ -69,21 +80,30 @@ In the discord developer portal...
 1. open Discord
 2. go to Settings > Advanced
 3. enable developer mode
-4. right-click on the channel
+4. right-click on the channel you want the bot to monitor
 5. select 'Copy ID'
 6. In the .env file, paste the process name at \<channel id\>
 > [!IMPORTANT]
 > Remove the "\<" "\>" when your enter your information
 
 ## Setup Task Scheduler 
-1. press win key and type: where python
-2. copy result into <your path> and remove the last \python.exe
-3. in file explore find the fill bot folder
-4. right click and select copy as path
-5. paste that in both <your python path>
+If you want the program to run automatically follow these steps
+
+### Paste The Path Into The Bot Runner File
+1. Open command prompt
+2. Enter the command "where python"
+3. copy the result into \<path\> and remove "\python.exe"
+> [!IMPORTANT]
+> Remove the "\<" "\>" when your enter your information
+
+### Paste The Python  
+5. in file explore find the fill bot folder
+6. right click and select copy as path
+7. paste that in both <your python path>
 keep \bot.py to the end of line 4
 to verify it works copy botRunner.bat as filepath and run it in terminal(win button search cmd and paste)
-
+> [!IMPORTANT]
+> Remove the "\<" "\>" when your enter your information
 
 1. Open Task Scheduler.
 2. Click "Create Task" at right side
@@ -129,3 +149,8 @@ turn off bluetooth
 Disable Unused Ports:
 power saver in power plan
 disable non esential apps in background
+
+## Additional configuration
+
+## Ways to reduce powerdraw device
+
