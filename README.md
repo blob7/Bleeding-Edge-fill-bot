@@ -64,7 +64,7 @@ In the discord developer portal...
 2. Naviage to the menu of the game
 3. Press ctrl + shift + esc to bring up task manager
 4. Locate Bleeding Edge in the process list.
-> ![NOTE]
+> [!NOTE]
 > The process can sometimes be listed as MobladeClient...exe. If that is the case copy that name into the .env file
 5. Select the > to the left of Bleeding Edge to expand
 6. Right click the process under Bleeding Edge
@@ -107,6 +107,19 @@ The purpose of the bat file is to ensure the task scheduler runs the file correc
 4. Paste the directory path in both \<dir path\>
 > [!IMPORTANT]
 > Remove the "\<" "\>" when your enter your information
+
+### Configure The Task.
+1. Copy the directory path from the previous step
+2. Open the 10MinFillBot.xml in a text editor
+3. In the command tags replace "your_dir" with the directory
+
+### Import The Task
+1. Open Task Scheduler
+2. *Optional*: create a new folder called My Tasks
+3.  Select 'Import Task...'
+4.  Select 10MinFillBot.xml
+5.  Select 'OK'
+
 
 ### Create Task In Task Scheduler
 1. Open Task Scheduler.
