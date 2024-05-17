@@ -6,6 +6,9 @@ Bleeding Edge fill bot
 ## Description
 A script to remotely execute Bleeding Edge, join a custom games lobby, and exit from a discord command.
 
+## Purpose
+This project was created for educational purposes only.
+
 ## How to use
 use the join command to specify what lobby code the bot should join
 run the bot script (either automatically or manually) to execute the actions
